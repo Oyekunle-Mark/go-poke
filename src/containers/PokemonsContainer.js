@@ -14,7 +14,7 @@ export default () => {
     <div className="container">
       {loading ? (
         <div className="spinner">
-          <Spinner radius={120} color={'#333'} stroke={2} visible={true} />
+          <Spinner radius={50} color={'#f16820'} stroke={2} />
         </div>
       ) : (
         pokemons.map(pokemon => <Pokemon key={pokemon.key} pokemon={pokemon} />)
