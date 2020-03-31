@@ -32,6 +32,10 @@ body {
   justify-content: space-between;
 }
 
+.container .spinner {
+  margin: 0 auto;
+}
+
 .container p {
   margin: 0;
 }
