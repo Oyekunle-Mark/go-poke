@@ -10,11 +10,11 @@ function App() {
   });
 
   return (
-    <ApolloProvider client={client}>
-      <div>
+    <div>
+      <ApolloProvider client={client}>
         <PokemonsContainer />
-      </div>
-    </ApolloProvider>
+      </ApolloProvider>
+    </div>
   );
 }
 
