@@ -1,7 +1,19 @@
 import React from 'react';
+import { useQuery } from '@apollo/react-hooks';
 
-export default () => (
-    <div>
-        This is a pokemon container
+import Pokemon from '../components/Pokemon';
+
+export default () => {
+  const { data: { pokemons = [] } = {} } = useQuery(GET_POKEMONS, {
+    variables: { first: 9 },
+  });
+
+  return (
+    <div className="container">
+      {pokemons &&
+        pokemons.map(pokemon => (
+          <Pokemon key={pokemon.key} pokemon={pokemon} />
+        ))}
     </div>
-);
+  );
+};
