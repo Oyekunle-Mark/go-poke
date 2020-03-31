@@ -6,7 +6,7 @@ import { GET_POKEMONS } from '../graphql/get-pokemons';
 
 export default () => {
   const { data: { pokemons = [] } = {} } = useQuery(GET_POKEMONS, {
-    variables: { first: 9 },
+    variables: { first: 10 },
   });
 
   return (
